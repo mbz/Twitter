@@ -27,7 +27,7 @@ with pd.HDFStore('_mentions.h5') as output_mentions:
                             ment_count += 1
                             dd = d.copy()
                             dd['mention'] = word
-                            df = pd.DataFrame(dd, index=[hash_count])
+                            df = pd.DataFrame(dd, index=[ment_count])
                             output_mentions.append('mention', df, min_itemsize=150)
 
                 k += 1
