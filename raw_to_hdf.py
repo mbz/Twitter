@@ -53,3 +53,6 @@ with pd.HDFStore('store.h5') as store:
                     store.append('tweets', data, min_itemsize=150, index=False)
                     queue.clear()
 
+                if k == 1000000:
+                    quit()
+
